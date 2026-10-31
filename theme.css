@@ -1,0 +1,39 @@
+/* The Maya shell theme: the colours and shadows of the shared header and
+   footer, under their own shell-* names, so they never meet the page's own
+   tokens. Import it after the page's own theme (a later `--color-*: initial`
+   would clear these too) and add the package's dist folder to @source:
+
+     @import "tailwindcss";
+     @import "./your-theme.css";
+     @import "@wikipanel/maya-shell/theme.css";
+     @source "../node_modules/@wikipanel/maya-shell/dist";
+
+   The values are the site's (brand violet #6e3bd8). The page loads the
+   Vazirmatn font itself. */
+
+@theme {
+  --color-shell-accent: #6e3bd8;
+  --color-shell-accent-hover: #5b2bc4;
+  --color-shell-accent-strong: #4c22a8;
+  --color-shell-accent-soft: #f1eaff;
+  --color-shell-accent-subtle: #fbf8ff;
+  --color-shell-accent-on-night: #b9a2ff;
+  --color-shell-on-accent: #ffffff;
+
+  --color-shell-page: #f7f5fc;
+  --color-shell-surface: #ffffff;
+  --color-shell-surface-border: #ece8f4;
+  --color-shell-ink: #160f2b;
+  --color-shell-ink-secondary: #4b4560;
+
+  --color-shell-night: #1a1233;
+  --color-shell-night-raised: #2a1f4d;
+  --color-shell-night-border: #33275c;
+  --color-shell-on-night: #ffffff;
+  --color-shell-on-night-secondary: #cfc3f5;
+  --color-shell-on-night-muted: #a99bd6;
+
+  --shadow-shell-raised:
+    0 1px 2px rgb(22 15 43 / 0.05), 0 28px 60px -28px rgb(46 20 112 / 0.42);
+  --shadow-shell-cta: 0 14px 30px -12px rgb(110 59 216 / 0.6);
+}
