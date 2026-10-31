@@ -1,0 +1,4 @@
+# Text files are stored and checked out with LF line endings on every system,
+# so formatters and checks give the same result on Windows and in CI.
+* text=auto eol=lf
+*.tgz binary
