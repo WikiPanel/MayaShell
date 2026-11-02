@@ -28,6 +28,7 @@ export interface Contacts {
 
 export const mainNav: readonly ShellLink[] = [
   { label: "خانه", href: "/" },
+  { label: "فروشگاه", href: "/shop/" },
   { label: "سرویس‌ها", href: "/services/" },
   { label: "راهنمای اتصال", href: "/guides/" },
   { label: "سوالات متداول", href: "/faq/" },

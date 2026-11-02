@@ -12,6 +12,7 @@ work as its task P2.06.
 | P1.02 | Header, footer, logo and theme from MayaSite | done   | 2026-10-31 |
 | P1.03 | Release v1.0.0 with its tarball              | done   | 2026-11-02 |
 | P1.04 | Text sizes and radii of the shell's own      | done   | 2026-11-02 |
+| P1.05 | «فروشگاه» in the menu                        | done   | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -46,3 +47,12 @@ work as its task P2.06.
   `-2xl` and `-3xl` with Tailwind's values, the markup uses them, and a test
   fails on any colour, text size or radius class from Tailwind's own scales.
   Released as v1.0.1.
+
+### P1.05 «فروشگاه» in the menu
+
+- The owner asked for the shop in the site's menu, right after «خانه»
+  (2026-11-02). `mainNav` gains «فروشگاه» (`/shop/`), marked on every shop
+  page.
+- Six items did not fit at 768 px, so up to lg the menu items, their gaps and
+  the header's gap are smaller and the main button shows no icon; measured on
+  MayaSite at 768, 1000, 1024 and 1280 px with no overflow. Released as v1.0.2.

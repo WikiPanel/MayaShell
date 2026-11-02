@@ -43,17 +43,15 @@ describe("SiteHeader", () => {
   });
 
   it("marks home only on the home page", () => {
-    assert.equal(
-      count(html(SiteHeader, { currentPath: "/" }), 'aria-current="page"'),
-      2,
-    );
-    assert.equal(
-      count(
-        html(SiteHeader, { currentPath: "/shop/me" }),
-        'aria-current="page"',
-      ),
-      0,
-    );
+    const home = html(SiteHeader, { currentPath: "/" });
+    assert.equal(count(home, 'aria-current="page"'), 2);
+    assert.match(home, /href="\/" aria-current="page"/);
+  });
+
+  it("marks the shop on every shop page", () => {
+    const out = html(SiteHeader, { currentPath: "/shop/me" });
+    assert.equal(count(out, 'aria-current="page"'), 2);
+    assert.match(out, /href="\/shop\/" aria-current="page"[^>]*>فروشگاه/);
   });
 
   it("takes the shop's panel button", () => {

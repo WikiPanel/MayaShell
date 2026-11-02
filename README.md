@@ -18,11 +18,11 @@ time; the shop renders it in the browser.
 
 ## Install
 
-Every release is a tag (`v1.0.1`) with its `npm pack` file attached to the
+Every release is a tag (`v1.0.2`) with its `npm pack` file attached to the
 GitHub release. No token is needed:
 
 ```bash
-npm install https://github.com/WikiPanel/MayaShell/releases/download/v1.0.1/wikipanel-maya-shell-1.0.1.tgz
+npm install https://github.com/WikiPanel/MayaShell/releases/download/v1.0.2/wikipanel-maya-shell-1.0.2.tgz
 ```
 
 The lock file keeps the exact file and its hash. To update, install the next

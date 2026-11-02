@@ -3,6 +3,13 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
+## v1.0.2 — 2026-11-02
+
+- «فروشگاه» (`/shop/`) joins the menu after «خانه», on the site and in the
+  shop; it is marked on every shop page.
+- Up to lg the menu is tighter (smaller gaps, no icon on the main button), so
+  the six items still fit at 768 px.
+
 ## v1.0.1 — 2026-11-02
 
 - The text sizes and corner radii are the shell's own (`text-shell-sm`,

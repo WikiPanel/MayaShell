@@ -34,9 +34,10 @@ const actionIcons = { bag: ShoppingBagIcon, user: UserIcon };
 
 /**
  * The site's header. The menu shows from tablet width up; up to lg it is
- * compact and the support control gives way (the menu has «پشتیبانی»), and up
- * to xl that control shows only its icon. Phones get a menu button: a
- * <details>, so it works without JavaScript.
+ * compact (tighter spacing, no icon on the main button) and the support
+ * control gives way (the menu has «پشتیبانی»), and up to xl that control shows
+ * only its icon. Phones get a menu button: a <details>, so it works without
+ * JavaScript.
  */
 export function SiteHeader({
   currentPath = "",
@@ -52,20 +53,20 @@ export function SiteHeader({
 
   return (
     <header className="sticky top-0 z-40 border-b border-shell-surface-border/80 bg-shell-page/85 backdrop-blur-xl">
-      <div className="mx-auto flex h-18 w-full max-w-[74rem] items-center gap-3 px-4 sm:px-6 lg:gap-6">
+      <div className="mx-auto flex h-18 w-full max-w-[74rem] items-center gap-2 px-4 sm:px-6 lg:gap-6">
         <Link href={homeHref} className="shrink-0">
           <Logo />
           <span className="sr-only">، صفحه اصلی</span>
         </Link>
 
         <nav aria-label="منوی اصلی" className="hidden md:block">
-          <ul className="flex items-center gap-1">
+          <ul className="flex items-center gap-0.5 lg:gap-1">
             {nav.map((item) => (
               <li key={item.href}>
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className="rounded-shell-xl px-2 py-2 text-shell-sm font-medium whitespace-nowrap text-shell-ink-secondary transition-colors hover:bg-shell-accent-subtle hover:text-shell-accent aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong lg:px-3.5 lg:text-[0.95rem]"
+                  className="rounded-shell-xl px-1.5 py-2 text-shell-sm font-medium whitespace-nowrap text-shell-ink-secondary transition-colors hover:bg-shell-accent-subtle hover:text-shell-accent aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong lg:px-3.5 lg:text-[0.95rem]"
                 >
                   {item.label}
                 </Link>
@@ -86,7 +87,7 @@ export function SiteHeader({
             href={action.href}
             className="inline-flex min-h-11 items-center justify-center gap-2 rounded-shell-2xl bg-shell-accent px-4 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-accent shadow-shell-cta transition-colors duration-200 hover:bg-shell-accent-hover lg:px-5"
           >
-            <ActionIcon size={18} />
+            <ActionIcon size={18} className="md:max-lg:hidden" />
             {action.label}
           </Link>
 
