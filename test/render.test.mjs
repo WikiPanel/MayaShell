@@ -36,6 +36,10 @@ describe("SiteHeader", () => {
     assert.doesNotMatch(out, /<script/);
   });
 
+  it("holds the logo in a flex box, in line with the menu", () => {
+    assert.match(html(SiteHeader), /<a href="\/" class="flex shrink-0">/);
+  });
+
   it("marks only the current section", () => {
     const out = html(SiteHeader, { currentPath: "/services/eco/" });
     assert.equal(count(out, 'aria-current="page"'), 2);

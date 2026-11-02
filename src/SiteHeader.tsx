@@ -53,7 +53,9 @@ export function SiteHeader({
   return (
     <header className="sticky top-0 z-40 border-b border-shell-surface-border/80 bg-shell-page/85 backdrop-blur-xl">
       <div className="mx-auto flex h-18 w-full max-w-[74rem] items-center gap-3 px-4 sm:px-6 lg:gap-6">
-        <Link href={homeHref} className="shrink-0">
+        {/* A flex box, not a line of text: a line box would leave room for
+            descenders under the logo and push it above the menu. */}
+        <Link href={homeHref} className="flex shrink-0">
           <Logo />
           <span className="sr-only">، صفحه اصلی</span>
         </Link>

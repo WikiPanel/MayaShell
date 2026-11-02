@@ -14,6 +14,7 @@ work as its task P2.06.
 | P1.04 | Text sizes and radii of the shell's own      | done    | 2026-11-02 |
 | P1.05 | «فروشگاه» in the menu                        | dropped |            |
 | P1.06 | Header fits 320 px phones                    | done    | 2026-11-02 |
+| P1.07 | Logo in line with the menu                   | done    | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -60,3 +61,12 @@ work as its task P2.06.
   scrolled sideways. Below 370 px the main button now hides its icon and
   uses `px-3`; measured on MayaSite at 320, 340, 359, 360, 375 and 768 px
   with no overflow (31 px to spare at 360 px). Released as v1.0.2.
+
+### P1.07 Logo in line with the menu
+
+- The owner saw the header's logo sit higher than the menu (2026-11-02).
+  The logo's link was a block holding a line of text, so a line box with
+  room for descenders hung under the logo: on MayaSite at 1024 px the link
+  was 47.6 px tall, the logo 36 px at its top, and the logo's middle 5.8 px
+  above the header's. The link is now a flex box as tall as the logo, so the
+  logo is centred like the menu.
