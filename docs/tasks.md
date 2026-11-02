@@ -6,12 +6,14 @@ work as its task P2.06.
 
 ## Index
 
-| ID    | Title                                        | Status | Done       |
-| ----- | -------------------------------------------- | ------ | ---------- |
-| P1.01 | Repository, package and release process      | done   | 2026-10-31 |
-| P1.02 | Header, footer, logo and theme from MayaSite | done   | 2026-10-31 |
-| P1.03 | Release v1.0.0 with its tarball              | done   | 2026-11-02 |
-| P1.04 | Text sizes and radii of the shell's own      | done   | 2026-11-02 |
+| ID    | Title                                        | Status  | Done       |
+| ----- | -------------------------------------------- | ------- | ---------- |
+| P1.01 | Repository, package and release process      | done    | 2026-10-31 |
+| P1.02 | Header, footer, logo and theme from MayaSite | done    | 2026-10-31 |
+| P1.03 | Release v1.0.0 with its tarball              | done    | 2026-11-02 |
+| P1.04 | Text sizes and radii of the shell's own      | done    | 2026-11-02 |
+| P1.05 | «فروشگاه» in the menu                        | dropped |            |
+| P1.06 | Header fits 320 px phones                    | done    | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -46,3 +48,15 @@ work as its task P2.06.
   `-2xl` and `-3xl` with Tailwind's values, the markup uses them, and a test
   fails on any colour, text size or radius class from Tailwind's own scales.
   Released as v1.0.1.
+
+### P1.05 «فروشگاه» in the menu
+
+- Dropped (owner, 2026-11-02): the header's «خرید اشتراک» button already
+  opens the shop. PR #3 was closed without a release.
+
+### P1.06 Header fits 320 px phones
+
+- At 320 px the header was 27 px wider than the screen, so every page
+  scrolled sideways. Below 370 px the main button now hides its icon and
+  uses `px-3`; measured on MayaSite at 320, 340, 359, 360, 375 and 768 px
+  with no overflow (31 px to spare at 360 px). Released as v1.0.2.

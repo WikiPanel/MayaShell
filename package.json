@@ -1,6 +1,6 @@
 {
   "name": "@wikipanel/maya-shell",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "The Maya VPN site's header, footer, logo and theme, shared by the site and the shop.",
   "license": "UNLICENSED",
   "type": "module",

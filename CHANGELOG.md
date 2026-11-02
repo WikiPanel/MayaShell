@@ -3,6 +3,12 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
+## v1.0.2 — 2026-11-02
+
+- Below 370 px the header's main button drops its icon and some padding, so
+  the header fits phones down to 320 px wide; it overflowed by 27 px there.
+  From 370 px up nothing changes.
+
 ## v1.0.1 — 2026-11-02
 
 - The text sizes and corner radii are the shell's own (`text-shell-sm`,

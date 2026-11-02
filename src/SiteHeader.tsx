@@ -84,9 +84,9 @@ export function SiteHeader({
           </SupportTrigger>
           <Link
             href={action.href}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-shell-2xl bg-shell-accent px-4 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-accent shadow-shell-cta transition-colors duration-200 hover:bg-shell-accent-hover lg:px-5"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-shell-2xl bg-shell-accent px-4 max-[370px]:px-3 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-accent shadow-shell-cta transition-colors duration-200 hover:bg-shell-accent-hover lg:px-5"
           >
-            <ActionIcon size={18} />
+            <ActionIcon size={18} className="max-[370px]:hidden" />
             {action.label}
           </Link>
 
