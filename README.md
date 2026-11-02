@@ -127,7 +127,7 @@ frame inside the Telegram Mini App is the shop's own choice.
 | `action`        | `shopAction`        | The footer's main button; `null` leaves it out.            |
 | `support`       | `{}`                | As in the header.                                          |
 | `linkComponent` | `PlainLink`         | As in the header.                                          |
-| `since`         | `foundedYear`       | The copyright line's first year (۱۳۹۰).                    |
+| `since`         | `foundedYear`       | The copyright line's first year (۱۳۹۱).                    |
 | `year`          | current Jalali year | Its last year; one year alone when both are the same.      |
 
 ### `SupportControl`

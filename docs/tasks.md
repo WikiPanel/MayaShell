@@ -16,6 +16,7 @@ work as its task P2.06.
 | P1.06 | Header fits 320 px phones                    | done    | 2026-11-02 |
 | P1.07 | Logo in line with the menu                   | done    | 2026-11-02 |
 | P1.08 | Maya's years in the footer                   | done    | 2026-11-02 |
+| P1.09 | Maya began in 1391                           | done    | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -78,3 +79,9 @@ work as its task P2.06.
   «© ۱۳۹۰–۱۴۰۵ مایا وی‌پی‌ان. همه حقوق محفوظ است.». `foundedYear` is the
   first year and `SiteFooter`'s new `since` prop can change it; when both
   years are the same, one is shown. Released with P1.07 as v1.0.3.
+
+### P1.09 Maya began in 1391
+
+- The owner corrected Maya's first year to ۱۳۹۱ (2026-11-02), just after
+  v1.0.3 was released with ۱۳۹۰. `foundedYear` is «۱۳۹۱», so the footer reads
+  «© ۱۳۹۱–۱۴۰۵ مایا وی‌پی‌ان. همه حقوق محفوظ است.». Released as v1.0.4.

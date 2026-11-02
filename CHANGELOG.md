@@ -3,6 +3,11 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
+## v1.0.4 — 2026-11-02
+
+- Maya began in ۱۳۹۱, not ۱۳۹۰ (the owner corrected it): `foundedYear` is
+  «۱۳۹۱» and the footer reads «© ۱۳۹۱–۱۴۰۵ مایا وی‌پی‌ان» (P1.09).
+
 ## v1.0.3 — 2026-11-02
 
 - The header's logo is centred with the menu; it sat 5.8 px higher, above an
