@@ -127,7 +127,8 @@ frame inside the Telegram Mini App is the shop's own choice.
 | `action`        | `shopAction`        | The footer's main button; `null` leaves it out.            |
 | `support`       | `{}`                | As in the header.                                          |
 | `linkComponent` | `PlainLink`         | As in the header.                                          |
-| `year`          | current Jalali year | The copyright year, in Persian digits.                     |
+| `since`         | `foundedYear`       | The copyright line's first year (۱۳۹۰).                    |
+| `year`          | current Jalali year | Its last year; one year alone when both are the same.      |
 
 ### `SupportControl`
 
@@ -141,8 +142,8 @@ frame inside the Telegram Mini App is the shop's own choice.
 
 - `Logo` (`night` for a dark surface), `PlainLink` (an `<a>`; another host
   gets `rel="noopener"`), `jalaliYear()`.
-- Data: `mainNav`, `footerColumns`, `contacts`, `tagline`, `shopAction`,
-  `panelAction`. Every site address is relative (`/services/`), so a mirror
+- Data: `mainNav`, `footerColumns`, `contacts`, `tagline`, `foundedYear`,
+  `shopAction`, `panelAction`. Every site address is relative (`/services/`), so a mirror
   domain keeps its visitors.
 - Types: `SiteHeaderProps`, `SiteFooterProps`, `LogoProps`, `LinkProps`,
   `LinkComponent`, `SupportControl`, `HeaderAction`, `ShellLink`,

@@ -108,9 +108,13 @@ describe("SiteFooter", () => {
     assert.doesNotMatch(out, /اینستاگرام/);
   });
 
-  it("writes the year in Persian digits", () => {
-    assert.match(html(SiteFooter), /© [۰-۹]{4} مایا وی‌پی‌ان/);
-    assert.match(html(SiteFooter, { year: "۱۴۰۶" }), /© ۱۴۰۶ /);
+  it("writes the years since ۱۳۹۰ in Persian digits", () => {
+    assert.match(html(SiteFooter), /© ۱۳۹۰–[۰-۹]{4} مایا وی‌پی‌ان/);
+    assert.match(html(SiteFooter, { year: "۱۴۰۶" }), /© ۱۳۹۰–۱۴۰۶ /);
+    assert.match(
+      html(SiteFooter, { since: "۱۴۰۶", year: "۱۴۰۶" }),
+      /© ۱۴۰۶ مایا/,
+    );
   });
 
   it("leaves the main button out when asked", () => {

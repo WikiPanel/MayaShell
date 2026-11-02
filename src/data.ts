@@ -75,6 +75,9 @@ export const contacts: Contacts = {
 export const tagline =
   "اتصال امن، سریع و پایدار روی همه دستگاه‌ها؛ با تحویل آنی، کاربر نامحدود و پشتیبانی آنلاین.";
 
+/** The Jalali year Maya began (owner, 2026-11-02): the copyright line's first year. */
+export const foundedYear = "۱۳۹۰";
+
 /** The site's main button, the default. */
 export const shopAction: HeaderAction = {
   label: "خرید اشتراک",

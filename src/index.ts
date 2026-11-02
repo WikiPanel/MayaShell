@@ -10,6 +10,7 @@ export {
 export {
   contacts,
   footerColumns,
+  foundedYear,
   mainNav,
   panelAction,
   shopAction,

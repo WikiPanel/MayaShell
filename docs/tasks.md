@@ -15,6 +15,7 @@ work as its task P2.06.
 | P1.05 | «فروشگاه» in the menu                        | dropped |            |
 | P1.06 | Header fits 320 px phones                    | done    | 2026-11-02 |
 | P1.07 | Logo in line with the menu                   | done    | 2026-11-02 |
+| P1.08 | Maya's years in the footer                   | done    | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -70,3 +71,10 @@ work as its task P2.06.
   was 47.6 px tall, the logo 36 px at its top, and the logo's middle 5.8 px
   above the header's. The link is now a flex box as tall as the logo, so the
   logo is centred like the menu.
+
+### P1.08 Maya's years in the footer
+
+- Maya began in ۱۳۹۰ (owner, 2026-11-02), so the copyright line reads
+  «© ۱۳۹۰–۱۴۰۵ مایا وی‌پی‌ان. همه حقوق محفوظ است.». `foundedYear` is the
+  first year and `SiteFooter`'s new `since` prop can change it; when both
+  years are the same, one is shown. Released with P1.07 as v1.0.3.

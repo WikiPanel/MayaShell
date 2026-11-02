@@ -3,6 +3,14 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
+## v1.0.3 — 2026-11-02
+
+- The header's logo is centred with the menu; it sat 5.8 px higher, above an
+  empty line box (P1.07).
+- The footer's copyright line gives Maya's years: «© ۱۳۹۰–۱۴۰۵ مایا
+  وی‌پی‌ان». `SiteFooter` takes `since` (the first year, `foundedYear` by
+  default); `foundedYear` is exported (P1.08).
+
 ## v1.0.2 — 2026-11-02
 
 - Below 370 px the header's main button drops its icon and some padding, so

@@ -1,6 +1,7 @@
 import {
   contacts as defaultContacts,
   footerColumns,
+  foundedYear,
   shopAction,
   tagline as defaultTagline,
   type Contacts,
@@ -26,7 +27,9 @@ export interface SiteFooterProps {
   action?: HeaderAction | null | undefined;
   support?: SupportControl | undefined;
   linkComponent?: LinkComponent | undefined;
-  /** The copyright year; the current Jalali year by default. */
+  /** The copyright line's first year; the year Maya began by default. */
+  since?: string | undefined;
+  /** The copyright line's last year; the current Jalali year by default. */
   year?: string | undefined;
 }
 
@@ -46,8 +49,10 @@ export function SiteFooter({
   action = shopAction,
   support = {},
   linkComponent: Link = PlainLink,
+  since = foundedYear,
   year = jalaliYear(),
 }: SiteFooterProps) {
+  const years = since && since !== year ? `${since}–${year}` : year;
   const { telegram, email, instagram } = contacts;
 
   return (
@@ -105,7 +110,7 @@ export function SiteFooter({
 
       <div className="border-t border-shell-night-border">
         <div className="mx-auto flex w-full max-w-[74rem] flex-col items-center justify-between gap-4 px-4 py-6 text-shell-sm text-shell-on-night-muted sm:flex-row sm:px-6">
-          <p>{`© ${year} مایا وی‌پی‌ان. همه حقوق محفوظ است.`}</p>
+          <p>{`© ${years} مایا وی‌پی‌ان. همه حقوق محفوظ است.`}</p>
           {(telegram || instagram || email) && (
             <ul className="flex items-center gap-2">
               {telegram && (
