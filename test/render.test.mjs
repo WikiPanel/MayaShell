@@ -128,14 +128,25 @@ describe("Logo", () => {
   });
 });
 
+const dist = new URL("../dist/", import.meta.url);
+const code = readdirSync(dist)
+  .filter((name) => name.endsWith(".js"))
+  .map((name) => readFileSync(new URL(name, dist)))
+  .reduce((all, part) => Buffer.concat([all, part]), Buffer.alloc(0));
+
 describe("size", () => {
   it("stays a few kilobytes", () => {
-    const dist = new URL("../dist/", import.meta.url);
-    const code = readdirSync(dist)
-      .filter((name) => name.endsWith(".js"))
-      .map((name) => readFileSync(new URL(name, dist)))
-      .reduce((all, part) => Buffer.concat([all, part]), Buffer.alloc(0));
     const kb = gzipSync(code).length / 1024;
     assert.ok(kb < 6, `${kb.toFixed(1)} KB gzipped`);
+  });
+});
+
+describe("classes", () => {
+  // A page's theme may clear Tailwind's colour, text and radius scales, so
+  // the shell uses its own shell-* tokens for all three.
+  it("use no colour, text size or radius from Tailwind's own scales", () => {
+    const scale =
+      /(?<![\w-])(?:[a-z0-9-]+:)*(?:text-(?:xs|sm|base|lg|[0-9]?xl)|rounded-(?:xs|sm|md|lg|[0-9]?xl)|(?:bg|text|border|fill|stroke)-(?:white|black|gray|slate|zinc|neutral|stone|red|orange|amber|yellow|lime|green|emerald|teal|cyan|sky|blue|indigo|violet|purple|fuchsia|pink|rose)(?:-\d+)?)(?![\w-])/g;
+    assert.deepEqual(code.toString().match(scale) ?? [], []);
   });
 });

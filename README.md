@@ -18,11 +18,11 @@ time; the shop renders it in the browser.
 
 ## Install
 
-Every release is a tag (`v1.0.0`) with its `npm pack` file attached to the
+Every release is a tag (`v1.0.1`) with its `npm pack` file attached to the
 GitHub release. No token is needed:
 
 ```bash
-npm install https://github.com/WikiPanel/MayaShell/releases/download/v1.0.0/wikipanel-maya-shell-1.0.0.tgz
+npm install https://github.com/WikiPanel/MayaShell/releases/download/v1.0.1/wikipanel-maya-shell-1.0.1.tgz
 ```
 
 The lock file keeps the exact file and its hash. To update, install the next
@@ -152,8 +152,13 @@ frame inside the Telegram Mini App is the shop's own choice.
 
 `theme.css` defines `--color-shell-*` (accent, its hover, strong, soft,
 subtle and on-night shades, page, surface, surface border, ink, night and its
-raised and border shades, and the text on night) and `--shadow-shell-raised`
-and `--shadow-shell-cta`, with the site's values.
+raised and border shades, and the text on night), `--shadow-shell-raised`
+and `--shadow-shell-cta`, `--text-shell-sm`, `-base` and `-xl` with their
+line heights, and `--radius-shell-xl`, `-2xl` and `-3xl`, with the site's
+values. The markup uses no colour, text size or radius from Tailwind's own
+scales, so a page whose theme clears them (`--text-*: initial`,
+`--radius-*: initial`) still shows the shell as the site does; a test checks
+it.
 
 ## Development
 

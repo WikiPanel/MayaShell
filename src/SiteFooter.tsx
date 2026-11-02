@@ -31,7 +31,7 @@ export interface SiteFooterProps {
 }
 
 const iconLink =
-  "flex size-10 items-center justify-center rounded-xl border border-shell-night-border hover:bg-shell-night-raised hover:text-shell-on-night";
+  "flex size-10 items-center justify-center rounded-shell-xl border border-shell-night-border hover:bg-shell-night-raised hover:text-shell-on-night";
 
 /**
  * The site's footer: the logo and tagline, three link columns that stay side
@@ -65,14 +65,14 @@ export function SiteFooter({
             {action && (
               <Link
                 href={action.href}
-                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-shell-on-night px-5 text-[0.95rem] font-bold whitespace-nowrap text-shell-night transition-colors duration-200 hover:bg-shell-accent-soft"
+                className="inline-flex min-h-11 items-center justify-center gap-2 rounded-shell-2xl bg-shell-on-night px-5 text-[0.95rem] font-bold whitespace-nowrap text-shell-night transition-colors duration-200 hover:bg-shell-accent-soft"
               >
                 {action.label}
               </Link>
             )}
             <SupportTrigger
               support={support}
-              className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-2xl border border-shell-night-border px-5 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-night transition-colors duration-200 hover:bg-shell-night-raised"
+              className="inline-flex min-h-11 cursor-pointer items-center justify-center gap-2 rounded-shell-2xl border border-shell-night-border px-5 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-night transition-colors duration-200 hover:bg-shell-night-raised"
             >
               <HeadphonesIcon size={18} />
               پشتیبانی آنلاین
@@ -83,10 +83,10 @@ export function SiteFooter({
         <div className="grid grid-cols-3 gap-x-4 gap-y-8 sm:gap-8">
           {columns.map((column) => (
             <nav key={column.title} aria-label={column.title}>
-              <h2 className="text-sm font-bold text-shell-on-night sm:text-base">
+              <h2 className="text-shell-sm font-bold text-shell-on-night sm:text-shell-base">
                 {column.title}
               </h2>
-              <ul className="mt-3 space-y-1 text-sm sm:mt-4 sm:space-y-1.5 sm:text-[0.95rem]">
+              <ul className="mt-3 space-y-1 text-shell-sm sm:mt-4 sm:space-y-1.5 sm:text-[0.95rem]">
                 {column.links.map((link) => (
                   <li key={link.href}>
                     <Link
@@ -104,7 +104,7 @@ export function SiteFooter({
       </div>
 
       <div className="border-t border-shell-night-border">
-        <div className="mx-auto flex w-full max-w-[74rem] flex-col items-center justify-between gap-4 px-4 py-6 text-sm text-shell-on-night-muted sm:flex-row sm:px-6">
+        <div className="mx-auto flex w-full max-w-[74rem] flex-col items-center justify-between gap-4 px-4 py-6 text-shell-sm text-shell-on-night-muted sm:flex-row sm:px-6">
           <p>{`© ${year} مایا وی‌پی‌ان. همه حقوق محفوظ است.`}</p>
           {(telegram || instagram || email) && (
             <ul className="flex items-center gap-2">

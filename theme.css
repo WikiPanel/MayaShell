@@ -1,7 +1,9 @@
-/* The Maya shell theme: the colours and shadows of the shared header and
-   footer, under their own shell-* names, so they never meet the page's own
-   tokens. Import it after the page's own theme (a later `--color-*: initial`
-   would clear these too) and add the package's dist folder to @source:
+/* The Maya shell theme: the colours, shadows, text sizes and corner radii of
+   the shared header and footer, under their own shell-* names, so they never
+   meet the page's own tokens, even where the page's theme clears Tailwind's
+   scales (`--text-*: initial`, `--radius-*: initial`). Import it after the
+   page's own theme (a later `--color-*: initial` would clear these too) and
+   add the package's dist folder to @source:
 
      @import "tailwindcss";
      @import "./your-theme.css";
@@ -36,4 +38,17 @@
   --shadow-shell-raised:
     0 1px 2px rgb(22 15 43 / 0.05), 0 28px 60px -28px rgb(46 20 112 / 0.42);
   --shadow-shell-cta: 0 14px 30px -12px rgb(110 59 216 / 0.6);
+
+  /* Tailwind's own sm, base and xl sizes and xl, 2xl and 3xl radii, with the
+     same unitless line heights, so the site looks as with Tailwind's scale. */
+  --text-shell-sm: 0.875rem;
+  --text-shell-sm--line-height: calc(1.25 / 0.875);
+  --text-shell-base: 1rem;
+  --text-shell-base--line-height: calc(1.5 / 1);
+  --text-shell-xl: 1.25rem;
+  --text-shell-xl--line-height: calc(1.75 / 1.25);
+
+  --radius-shell-xl: 0.75rem;
+  --radius-shell-2xl: 1rem;
+  --radius-shell-3xl: 1.5rem;
 }

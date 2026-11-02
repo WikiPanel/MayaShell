@@ -11,6 +11,7 @@ work as its task P2.06.
 | P1.01 | Repository, package and release process      | done   | 2026-10-31 |
 | P1.02 | Header, footer, logo and theme from MayaSite | done   | 2026-10-31 |
 | P1.03 | Release v1.0.0 with its tarball              | done   | 2026-11-02 |
+| P1.04 | Text sizes and radii of the shell's own      | done   | 2026-11-02 |
 
 ## Phase 1 — First release
 
@@ -35,3 +36,13 @@ work as its task P2.06.
 ### P1.03 Release v1.0.0 with its tarball
 
 - Tag `v1.0.0` and a GitHub release with `wikipanel-maya-shell-1.0.0.tgz`.
+
+### P1.04 Text sizes and radii of the shell's own
+
+- Asked by MayaShop (2026-11-02): its theme clears Tailwind's text and radius
+  scales, so `text-sm`, `text-base` and `rounded-*` were missing or
+  different in the shop. `theme.css` adds `--text-shell-sm`, `-base` and
+  `-xl` (with Tailwind's unitless line heights) and `--radius-shell-xl`,
+  `-2xl` and `-3xl` with Tailwind's values, the markup uses them, and a test
+  fails on any colour, text size or radius class from Tailwind's own scales.
+  Released as v1.0.1.

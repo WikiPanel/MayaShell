@@ -28,7 +28,7 @@ export function Logo({ night = false, className }: LogoProps) {
       <span
         dir="ltr"
         className={cx(
-          "relative top-[0.125em] text-xl font-extrabold tracking-tight",
+          "relative top-[0.125em] text-shell-xl font-extrabold tracking-tight",
           night ? "text-shell-on-night" : "text-shell-ink",
         )}
       >

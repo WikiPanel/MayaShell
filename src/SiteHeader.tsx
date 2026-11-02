@@ -65,7 +65,7 @@ export function SiteHeader({
                 <Link
                   href={item.href}
                   aria-current={isActive(item.href) ? "page" : undefined}
-                  className="rounded-xl px-2 py-2 text-sm font-medium whitespace-nowrap text-shell-ink-secondary transition-colors hover:bg-shell-accent-subtle hover:text-shell-accent aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong lg:px-3.5 lg:text-[0.95rem]"
+                  className="rounded-shell-xl px-2 py-2 text-shell-sm font-medium whitespace-nowrap text-shell-ink-secondary transition-colors hover:bg-shell-accent-subtle hover:text-shell-accent aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong lg:px-3.5 lg:text-[0.95rem]"
                 >
                   {item.label}
                 </Link>
@@ -77,14 +77,14 @@ export function SiteHeader({
         <div className="ms-auto flex items-center gap-2">
           <SupportTrigger
             support={support}
-            className="hidden min-h-11 cursor-pointer items-center gap-2 rounded-xl px-3 font-medium whitespace-nowrap text-shell-ink-secondary hover:text-shell-accent sm:inline-flex md:hidden lg:inline-flex"
+            className="hidden min-h-11 cursor-pointer items-center gap-2 rounded-shell-xl px-3 font-medium whitespace-nowrap text-shell-ink-secondary hover:text-shell-accent sm:inline-flex md:hidden lg:inline-flex"
           >
             <HeadphonesIcon size={19} />
             <span className="lg:max-xl:sr-only">پشتیبانی آنلاین</span>
           </SupportTrigger>
           <Link
             href={action.href}
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-2xl bg-shell-accent px-4 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-accent shadow-shell-cta transition-colors duration-200 hover:bg-shell-accent-hover lg:px-5"
+            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-shell-2xl bg-shell-accent px-4 text-[0.95rem] font-bold whitespace-nowrap text-shell-on-accent shadow-shell-cta transition-colors duration-200 hover:bg-shell-accent-hover lg:px-5"
           >
             <ActionIcon size={18} />
             {action.label}
@@ -93,7 +93,7 @@ export function SiteHeader({
           <details className="group relative md:hidden">
             <summary
               aria-label="منو"
-              className="flex size-11 cursor-pointer list-none items-center justify-center rounded-xl border border-shell-surface-border bg-shell-surface text-shell-ink [&::-webkit-details-marker]:hidden"
+              className="flex size-11 cursor-pointer list-none items-center justify-center rounded-shell-xl border border-shell-surface-border bg-shell-surface text-shell-ink [&::-webkit-details-marker]:hidden"
             >
               <span className="group-open:hidden">
                 <MenuIcon size={22} />
@@ -104,7 +104,7 @@ export function SiteHeader({
             </summary>
             <nav
               aria-label="منوی موبایل"
-              className="absolute end-0 top-14 w-64 rounded-3xl border border-shell-surface-border bg-shell-surface p-2 shadow-shell-raised"
+              className="absolute end-0 top-14 w-64 rounded-shell-3xl border border-shell-surface-border bg-shell-surface p-2 shadow-shell-raised"
             >
               <ul>
                 {nav.map((item) => (
@@ -112,7 +112,7 @@ export function SiteHeader({
                     <Link
                       href={item.href}
                       aria-current={isActive(item.href) ? "page" : undefined}
-                      className="flex min-h-12 items-center rounded-2xl px-4 font-medium text-shell-ink-secondary hover:bg-shell-accent-subtle aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong"
+                      className="flex min-h-12 items-center rounded-shell-2xl px-4 font-medium text-shell-ink-secondary hover:bg-shell-accent-subtle aria-[current=page]:bg-shell-accent-soft aria-[current=page]:font-bold aria-[current=page]:text-shell-accent-strong"
                     >
                       {item.label}
                     </Link>
@@ -121,7 +121,7 @@ export function SiteHeader({
                 <li className="mt-1 border-t border-shell-surface-border pt-1 sm:hidden">
                   <SupportTrigger
                     support={support}
-                    className="flex min-h-12 w-full cursor-pointer items-center gap-2 rounded-2xl px-4 font-medium text-shell-accent hover:bg-shell-accent-subtle"
+                    className="flex min-h-12 w-full cursor-pointer items-center gap-2 rounded-shell-2xl px-4 font-medium text-shell-accent hover:bg-shell-accent-subtle"
                   >
                     <HeadphonesIcon size={19} />
                     پشتیبانی آنلاین

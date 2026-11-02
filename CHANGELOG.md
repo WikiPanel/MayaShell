@@ -3,6 +3,14 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
+## v1.0.1 — 2026-11-02
+
+- The text sizes and corner radii are the shell's own (`text-shell-sm`,
+  `-base`, `-xl`, `rounded-shell-xl`, `-2xl`, `-3xl` in `theme.css`), with
+  Tailwind's default values, so a page whose theme clears Tailwind's text or
+  radius scale (MayaShop) shows the shell as the site does. No change to the
+  API or to the site's look.
+
 ## v1.0.0 — 2026-11-02
 
 First release, the header and footer of MayaSite v1.0.21.
