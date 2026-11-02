@@ -3,7 +3,7 @@
 Every release is a tag with its `npm pack` file attached to the GitHub
 release.
 
-## v1.0.0 — 2026-10-31
+## v1.0.0 — 2026-11-02
 
 First release, the header and footer of MayaSite v1.0.21.
 

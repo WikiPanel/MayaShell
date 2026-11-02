@@ -10,7 +10,7 @@ work as its task P2.06.
 | ----- | -------------------------------------------- | ------ | ---------- |
 | P1.01 | Repository, package and release process      | done   | 2026-10-31 |
 | P1.02 | Header, footer, logo and theme from MayaSite | done   | 2026-10-31 |
-| P1.03 | Release v1.0.0 with its tarball              | done   | 2026-10-31 |
+| P1.03 | Release v1.0.0 with its tarball              | done   | 2026-11-02 |
 
 ## Phase 1 — First release
 
